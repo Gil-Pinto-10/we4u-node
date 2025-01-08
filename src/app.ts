@@ -14,7 +14,7 @@ async function startServer() {
 
 
   app.use(cors({
-    origin: config.cors, 
+    origin: config.allowedOrigins, 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204

@@ -17,7 +17,11 @@ export default {
   port: parseInt(process.env.PORT, 10) || 4000,
 
   planningApiUrl: process.env.PLANNING_API_URL || 'http://localhost:8080',
-
+  
+  allowedOrigins : [
+    'https://www.we4u.pt',
+    'https://we4u-api.onrender.com'
+  ],
   
 
   databaseURL: process.env.MONGODB_URI || 'mongodb+srv://admin:admin@cluster0.cg38r.mongodb.net/lapr5?retryWrites=true&w=majority',
@@ -107,6 +111,6 @@ export default {
   /**
    * Array of allowed origin domains for any CORS 
    */
-  cors: 'http://localhost:4200' || 'http://we4u-9pl3-git-main-gil-pintos-projects.vercel.app',
+  cors: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ['http://localhost:4200', 'http://we4u-9pl3-git-main-gil-pintos-projects.vercel.app', '']
 
 };
