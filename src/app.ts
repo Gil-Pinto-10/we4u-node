@@ -13,11 +13,10 @@ async function startServer() {
 
   app.options('*', cors()); // Handle all OPTIONS requests for preflight
 
-  await require('./loaders').default({ expressApp: app });
 
 
   app.use(cors({
-    origin: '*', 
+    origin: ['https://www.we4u.pt', 'https://we4u-node.onrender.com', 'https://we4u-api.onrender.com'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204
@@ -28,6 +27,13 @@ async function startServer() {
     next();
   });
 
+  app.use((err, req, res, next) => {
+    Logger.error('Error caught in middleware:', err);  // Log any caught errors
+    res.status(500).send({ error: 'Internal Server Error' });  // Send 500 status with an error message
+  });
+  
+
+  await require('./loaders').default({ expressApp: app });
 
 
   app.listen(config.port, () => {
