@@ -8,7 +8,10 @@ import express from 'express';
 import Logger from './loaders/logger';
 
 async function startServer() {
+  
   const app = express();
+
+  app.options('*', cors()); // Handle all OPTIONS requests for preflight
 
   await require('./loaders').default({ expressApp: app });
 
