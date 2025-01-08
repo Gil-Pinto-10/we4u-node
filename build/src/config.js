@@ -94,6 +94,6 @@ exports.default = {
     /**
      * Array of allowed origin domains for any CORS
      */
-    cors: 'http://localhost:4200' || 'http://we4u-9pl3-git-main-gil-pintos-projects.vercel.app',
+    cors: 'http://localhost:4200' || 'http://we4u-9pl3-git-main-gil-pintos-projects.vercel.app' || 'https://we4u-node.onrender.com' || 'https://we4u-api.onrender.com' || 'https://www.we4u.pt',
 };
 //# sourceMappingURL=config.js.map
