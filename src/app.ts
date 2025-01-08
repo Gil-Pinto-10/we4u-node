@@ -20,6 +20,11 @@ async function startServer() {
     optionsSuccessStatus: 204
   }));
 
+  app.use((req, res, next) => {
+    console.log('Request Origin:', req.get('Origin'));  // Log the request origin
+    next();
+  });
+
 
 
   app.listen(config.port, () => {
