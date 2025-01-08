@@ -12,7 +12,7 @@ import { PatientMedicalRecord } from '../domain/patientMedicalRecord/patientMedi
 import { PatientMedicalRecordMapper } from '../mappers/PatientMedicalRecordMapper';
 import IMedicalConditionRepo from './IRepos/IMedicalConditionRepo';
 import IAllergieRepo from './IRepos/IAllergieRepo';
-import axios, { all } from 'axios';
+import axios from 'axios';
 import { environment } from '../environment/environment';
 import { Allergie } from '../domain/allergie/allergie';
 import { IAllergieDTO } from '../dto/IAllergieDTO';

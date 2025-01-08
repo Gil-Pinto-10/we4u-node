@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:5000',
-    authApiUrl: 'https://localhost:5001',
+    apiUrl: 'https://we4u-api.onrender.com',
+    authApiUrl: 'https://we4u-api.onrender.com',
   };
