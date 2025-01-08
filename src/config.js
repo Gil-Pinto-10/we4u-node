@@ -20,7 +20,8 @@ export default {
   
   allowedOrigins : [
     'https://www.we4u.pt',
-    'https://we4u-api.onrender.com'
+    'https://we4u-api.onrender.com',
+    'https://we4u-node.onrender.com'
   ],
   
 
